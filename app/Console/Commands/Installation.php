@@ -164,7 +164,7 @@ class Installation extends Command
         $this->info('Running database migrations');
         $this->line('');
 
-        $process = Artisan::call('migrate');
+        $process = Artisan::call('migrate',['--force' => true]);
 
         $this->line('');
     }
