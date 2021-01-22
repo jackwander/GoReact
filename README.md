@@ -21,7 +21,7 @@
 
 > $ chmod -R 775 storage
 
-3. Run the install and follow the instructions:
+3. Run the installer and follow the instructions:
 
 > $ php artisan goreact::install
 
