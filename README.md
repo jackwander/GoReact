@@ -16,7 +16,9 @@
 2. Install the dependencies:
 
 > $ composer install
+
 > $ npm install && npm run dev
+
 > $ chmod -R 775 storage
 
 3. Run the install and follow the instructions:
