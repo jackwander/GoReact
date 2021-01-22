@@ -19,6 +19,9 @@ class CreateFilesTable extends Migration
             $table->string('fileable_type');
             $table->string('filename');
             $table->string('url');
+            $table->string('s3_name');
+            $table->string('mime');
+            $table->string('description');
             $table->timestamps();
         });
     }
