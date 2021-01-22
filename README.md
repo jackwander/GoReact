@@ -28,7 +28,7 @@
 
 > $ php artisan goreact:install
 
-4. After installing successfully run
+4. After installing successfully
 
 > $ php artisan serve
 
