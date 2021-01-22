@@ -19,15 +19,19 @@
 
 > $ npm install && npm run dev
 
-> $ chmod -R 775 storage
+> $ chmod -R 777 storage
 
 3. Run the installer and follow the instructions:
 
-> $ php artisan goreact::install
+> $ php artisan goreact:install
+
+4. After installing successfully run
+
+> $ php artisan serve
 
 ## Test
 
-### To test the all the functionalities run:
+### To test the all the functionalities run
 > $ vendor/bin/phpunit
 
 ### Functionality Testing
