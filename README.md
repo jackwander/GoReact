@@ -1,5 +1,14 @@
 # Welcome
 
+###Features:
+* Laravel 8
+* Livewire
+* Authentication
+* File Upload
+* Image, Video and PDF Rendering
+* Amazon S3 Bucket for Storage
+
+
 ## Setup
 
 1. Secure Database Credentials and Create Database for this Application
