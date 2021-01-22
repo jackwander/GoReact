@@ -11,7 +11,10 @@
 
 ## Setup
 
-1. Secure Database Credentials and Create Database for this Application
+1. Secure the following first
+* Database Credentials
+* Create Database for this Application
+* AWS S3 Bucket Access Information
 
 2. Install the dependencies:
 
