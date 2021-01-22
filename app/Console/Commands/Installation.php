@@ -77,6 +77,7 @@ class Installation extends Command
       $this->line('');
       $config = $this->restructureConfig([
           'db'      => $this->getDatabaseInformation(),
+          'aws'    => $this->getAwsInformation(),
       ]);
 
       $user = $this->getAdminInformation();
@@ -220,6 +221,25 @@ class Installation extends Command
         }
 
         return $database;
+    }
+
+    /**
+     * Prompts the user for the AWS S3 details.
+     *
+     * @return array
+     */
+    private function getAwsInformation(): array
+    {
+        $this->header('AWS S3 details');
+
+        $aws['access_key_id']       = $this->ask('Access Key ID');
+        $aws['secret_access_key']   = $this->askSecretAndValidate('Secret Access Key', [], function ($answer) {
+            return $answer;
+        });
+        $aws['default_region']      = $this->ask('Default Region');
+        $aws['bucket']              = $this->ask('Bucket');
+
+        return $aws;
     }
 
     private function getAdminInformation(): array
