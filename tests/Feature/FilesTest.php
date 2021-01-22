@@ -73,4 +73,18 @@ class FilesTest extends TestCase
 
     \Storage::disk('s3')->assertExists('files/'.$response->s3_name);
   }
+
+  /** @test */
+  public function authenticated_can_view_file() {
+    $this->actingAs($user = User::factory()->create());
+    \Storage::fake('s3');
+    $file = $user->files()->create([
+      'filename'=>'Test Name',
+      'description'=>'Test Description',
+      'url'=>'Test Url',
+      's3_name'=>'Test',
+      'mime'=> "mp4"
+    ]);
+    $response = $this->get('/view/'.$file->id)->assertOk();
+  }
 }
