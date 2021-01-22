@@ -10,13 +10,4 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    /**
-     * Description: 
-     * Date: 
-     **/
-    public function dashboard() {
-      $files = auth()->user()->files;
-      return view('dashboard',compact('files'));
-    }
 }

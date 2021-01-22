@@ -23,11 +23,8 @@ Route::get('/', function () {
 
 
 Route::group(['middleware'=>['auth']],function ($router) {
-  $controller = 'App\Http\Controllers\Controller';
-
   Route::get('dashboard', Dashboard::class)->name('dashboard');
   Route::get('upload', UploadFile::class)->name('upload');
-  Route::get('files', ShowFiles::class);
   Route::get('/view/{file_id}', ViewFile::class)->name('view');
 });
 
